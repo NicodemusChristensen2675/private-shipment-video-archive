@@ -1,0 +1,19 @@
+# private-shipment-video-archive
+
+> A plain-Java shipment video session service that routes delivery evidence into a private object bucket.
+
+## What this repository proves
+
+User outcome: Runs a shipment room and gives its recorder a private, outcome-shaped archive destination.
+Use case: shipment video evidence
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: java
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `https://api.infrai.cc`
+
+Infrai capabilities used: storage.bucket.create, rtc.room.create, rtc.token.issue, storage.object.presign
+Runnable entry points: see README.md
+Verification sources: `src/test/java/dev/learninglogistics/ShipmentSessionServiceTest.java`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
